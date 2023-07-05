@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+service UserService {
+    rpc GetAll (Empty) returns (UserList) {}
+    rpc Get (UserRequestId) returns (User) {}
+    rpc Insert (User) returns (User) {}
+    rpc Update (User) returns (User) {}
+    rpc Remove (UserRequestId) returns (Empty) {}
+}
+
+message Empty {}
+
+message User {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    string phone = 4;
+    string dob = 5;
+    string gender = 6;
+    string otp = 7;
+    bool is_divorced = 8;
+    string address = 9;
+    string profile_pic = 10;
+    string religion = 11;
+    string education = 12;
+    string country = 13;
+    string status = 14;
+    string token = 15;
+}
+
+message UserList {
+    repeated User users = 1;
+}
+
+message UserRequestId {
+    string phone = 1;
+    string otp = 2;
+}
