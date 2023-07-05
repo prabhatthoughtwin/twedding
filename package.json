@@ -2,11 +2,11 @@
   "name": "t-wedding-server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.ts",
+  "main": "server.js",
   "scripts": {
     "start": "node src/server",
     "start:dev": "cross-env NODE_ENV=development nodemon src/server.ts",
-    "start:prod": "cross-env NODE_ENV=production nodemon src/server.ts",
+    "start:prod": "cross-env NODE_ENV=production nodemon dist/server",
     "start:debug": "cross-env NODE_ENV=development nodemon inspect src/server",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js",
