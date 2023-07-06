@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server",
     "build": "tsc",
-    "build:proto": "ts-proto --protoFiles=./src/proto --outputDir=./dist/proto",
+    "build:proto": "ts-proto --protoFiles=./src/proto/user.proto --outputDir=./dist/proto",
     "start:dev": "cross-env NODE_ENV=development nodemon src/server.ts",
     "start:prod": "cross-env NODE_ENV=production nodemon dist/server",
     "start:debug": "cross-env NODE_ENV=development nodemon inspect src/server",

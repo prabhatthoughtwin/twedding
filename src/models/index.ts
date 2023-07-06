@@ -4,17 +4,17 @@ import createUserProfileModel from './user-profile';
 import createReqStsModel from './request-status';
 import createChatMsgModel from './chat-message';
 import createChatAttachModel from './chat-attachment';
-import { host, user_name, password, database } from '../utils/constant';
+import { dbConfigration } from '../utils/constant';
 
 
 const sequelize = new Sequelize(
-  database as string,
-  user_name as string,
-  password,
+  dbConfigration.database as string,
+  dbConfigration.user_name as string,
+  dbConfigration.password,
   {
     dialect: 'postgres',
     timezone: '+05:30',
-     host,
+     host:dbConfigration.host,
 
     logging: false, // Disable Query log in the console during development.
   },

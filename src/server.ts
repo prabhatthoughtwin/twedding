@@ -8,7 +8,7 @@ import userObj from './function/user';
 
 db;
 
-var packageDefinition = loadSync(path.join(__dirname, './proto/user.proto'), {
+var packageDefinition = loadSync(path.join(__dirname, '../proto/user.proto'), {
     keepCase: true,
     longs: String,
     enums: String,
